@@ -35,14 +35,14 @@ const Home = () => {
             alert("Input is empty.\rPlease give a valid input");
         }
         else {
-            const response = await axios.get('http://api.openweathermap.org/geo/1.0/direct?', {
+            const response = await axios.get('https://api.openweathermap.org/geo/1.0/direct?', {
                 params: {
                     q: input, appid: 'a8a4431bbc47f6fd2352a7cf892f6c66',
                 }
             });
 
             try {
-                const temp = await axios.get('https://api.openweathermap.org/data/2.5/weather?', {
+                const temp = await axios.get('httpss://api.openweathermap.org/data/2.5/weather?', {
                     params: {
                         lat: response.data[0].lat, lon: response.data[0].lon, appid: 'a8a4431bbc47f6fd2352a7cf892f6c66',
                     }
