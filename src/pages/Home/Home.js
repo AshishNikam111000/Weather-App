@@ -42,7 +42,7 @@ const Home = () => {
             });
 
             try {
-                const temp = await axios.get('httpss://api.openweathermap.org/data/2.5/weather?', {
+                const temp = await axios.get('https://api.openweathermap.org/data/2.5/weather?', {
                     params: {
                         lat: response.data[0].lat, lon: response.data[0].lon, appid: 'a8a4431bbc47f6fd2352a7cf892f6c66',
                     }
